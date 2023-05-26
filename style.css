@@ -1,0 +1,23 @@
+h1 {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+    font-family:'Helvetica Neue'
+}
+
+h2 {
+    text-indent: 15px;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 7;
+    font-family:monospace
+}
+
+div {
+    border: 1px solid rgb(187, 187, 187);
+    padding: 8px;
+}
+
+body {
+    background-color: lightgray;
+}
