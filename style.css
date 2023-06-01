@@ -1,23 +1,72 @@
+/* Custom styles for Ben's portfolio website. 
+Not copy and pasted or built from a tutorial. */
+
 h1 {
     text-indent: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family:'Helvetica Neue'
+}
+flex-container {
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+body{
+    margin-top:30px;
+    flex:1
+}
+
+h4 {
+    text-indent: 5px;
     text-align: justify;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    font-family:monospace
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    background-color: gray;
+    position:fixed;
+    top:0;
+    left:0;
+    height:50px;
+    width: 100%;
+
+}
+
+li a {
+    float: left;
+    color:white;
+    text-align:center;
+    padding: 16px 16px;
+    display: block;
+    text-decoration: none;
+    background-color: gray;
     font-family:'Helvetica Neue'
 }
 
-h2 {
-    text-indent: 15px;
-    text-align: justify;
-    letter-spacing: 1px;
-    font-size: 7;
-    font-family:monospace
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color:red;
 }
 
 div {
     border: 1px solid rgb(187, 187, 187);
-    padding: 8px;
+    margin-top:80px;
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom:20px;
+    padding: 20px;
 }
 
 body {
-    background-color: lightgray;
+    background-color: #dddddd;
 }
