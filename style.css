@@ -8,12 +8,36 @@ h1 {
     font-family:'Helvetica Neue'
 }
 
+.navbar {
+    overflow:hidden;
+    background-color:#666666;
+    position:fixed;
+    top:0;
+    width:100%;
+    backdrop-filter: blur(0.8);
+}
+
+.navbar a {
+    float: left;
+    color:black;
+    text-align:center;
+    padding: 16px 16px;
+    display: block;
+    text-decoration: none;
+    /* opacity: .30; */
+    font-family:'Helvetica Neue'
+}
+
+.navbar a:hover:not(.active) {
+    background-color: #111;
+}
+
 .hero {
     position: relative;
     width:100vw;
     height:50vh;
     display:flex;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: -8px;
     justify-content: center;
     align-items: center;
@@ -65,29 +89,17 @@ ul {
     margin: 0;
     padding: 0;
     overflow:hidden;
-    background-color: gray;
+    opacity: .30;
     position:fixed;
+    backdrop-filter: blur(0.8);
     top:0;
     left:0;
-    height:50px;
+    height:70px;
     width: 100%;
 
 }
 
-li a {
-    float: left;
-    color:white;
-    text-align:center;
-    padding: 16px 16px;
-    display: block;
-    text-decoration: none;
-    background-color: gray;
-    font-family:'Helvetica Neue'
-}
 
-li a:hover:not(.active) {
-    background-color: #111;
-}
 
 .active {
     background-color:red;
