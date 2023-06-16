@@ -3,13 +3,14 @@
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
     
         <nav id="navbar" class="navbar">
             <ul>
              <li><a href = "index.html">Home</a></li>
-             <li><a href = "#Resume">Resume</a></li>
              <li><a href = "#Projects">Projects</a></li>
+             <li><a href = "#Resume">Resume</a></li>
              <li><a href = "#about">About Me</a></li>
             </ul>
 
@@ -17,22 +18,55 @@
 
     <section class="hero">
 
-        
-
         <div class = "hero-content">
-            <h1 class ="hero-title">
-                Benjamin Kloepfer
-            </h1>
+            <p class ="hero-title">
+                <b>Benjamin Kloepfer</b>
+            </p>
         </div>
 
     </section>
 
 
-    <flex-container id="Resume">
+    <flex-container id="Projects">
         
         <div>
-        <h2>Resume</h2>
+        <h1>Projects</h1>
 
+        <h3>
+            ResilientMissionary: A Missionary Mental Health Application
+        </h3>
+        <a href="https://github.com/Call-To-Health/MissionaryMentalHealth" target="blank">Github Link</a>
+        </div>
+
+        </flex-container>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://lh3.googleusercontent.com/pw/AJFCJaVKJOz2wXiuzn5RWFlee0zUu2LMfZMvMiJOGTFJ9kVHreBbpdT6MOx0k-ShvWvqIuWV0yXNfZcvV-ndSWnO6PAeboksxoELFRZ25_ML8RzxViuynXCi1HnTojjwGgS9leM-BZsJ9QR9dC4UzZXsg4crsw=w1498-h1996-s-no?authuser=0" style="width:100%; height:20%">
+                <div class="text">The app homescreen</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://lh3.googleusercontent.com/pw/AJFCJaVKJOz2wXiuzn5RWFlee0zUu2LMfZMvMiJOGTFJ9kVHreBbpdT6MOx0k-ShvWvqIuWV0yXNfZcvV-ndSWnO6PAeboksxoELFRZ25_ML8RzxViuynXCi1HnTojjwGgS9leM-BZsJ9QR9dC4UzZXsg4crsw=w1498-h1996-s-no?authuser=0" style="width:100%; height:20%">
+                <div class="text">The library</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://lh3.googleusercontent.com/pw/AJFCJaVKJOz2wXiuzn5RWFlee0zUu2LMfZMvMiJOGTFJ9kVHreBbpdT6MOx0k-ShvWvqIuWV0yXNfZcvV-ndSWnO6PAeboksxoELFRZ25_ML8RzxViuynXCi1HnTojjwGgS9leM-BZsJ9QR9dC4UzZXsg4crsw=w1498-h1996-s-no?authuser=0" style="width:100%; height:20%">
+                <div class="text">Daily Check-in</div>
+            </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>   
+    <br>
+    
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
 
     </flex-container>
@@ -106,4 +140,33 @@
     </footer>
 
 </body>
+<script>
+    let slideIndex = 1; 
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+    
+</script>
 </html>
