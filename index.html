@@ -104,13 +104,13 @@
     </div>
     <div class="row">
         <div class="column">
-            <form action="/action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name...">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+            <form method="post">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Your name...">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Your last name...">
                 <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email...">
+                <input type="email" id="email" name="email" placeholder="Your email..." required>
                 <label for="country">Country</label>
                 <select id="country" name="country">
                     <option value="algeria">Algeria</option>
@@ -125,8 +125,8 @@
                     <option value="spain">Spain</option>
                     <option value="usa">United States of America</option>
                 </select>
-                <label for="subject">Message</label>
-                <textarea id="subject" name="subject" placeholder="Write something here..." style="height:150px"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something here..." style="height:150px" required></textarea>
                 <input type="submit" value="Submit">
             </form>
         </div>
