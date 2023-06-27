@@ -168,6 +168,27 @@ body {
     to {opacity: 1}
 }
 
+svg {
+    display:block;
+    width:100%;
+    height:150px;
+    background:rgb(18, 55, 85);
+}
+
+.svg-gray {
+    display:block;
+    width:100%;
+    height:150px;
+    background:lightgray;
+}
+
+.svg-black {
+    display:block;
+    width:100%;
+    height:150px;
+    background:black;
+}
+
 /* Flexible container settings */
 flex-container {
     display:flex;
