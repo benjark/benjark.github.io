@@ -129,15 +129,16 @@
 
     <!-- Third number indicates the angle of the diagonal line -->
     <svg class="svg-black" viewBox="0 0 100 10" preserveAspectRatio="none">
-        <polygon points="100 0 100 10 0 10" fill="lightgray" stroke="none"></polygon>
+        <polygon points="100 0 100 10 0 10" fill="lightgray" stroke-width=0px;></polygon>
     </svg>
 
     <flex-container id="Resume">
         <h1 style="font-size:55px; color:black"></h1>
     </flex-container>
+
     <flex-container-gray>
     <paper>
-        <h3 style="font-size:35px;text-align:center; stroke:none; color:black"> Benjamin Kloepfer</h3>
+        <h3 style="font-size:35px;text-align:center; color:black"> Benjamin Kloepfer</h3>
         <hr>
         <h3 style="font-size:35px; stroke:none; color:black">My Skills</h3>
         <p>HTML</p>
@@ -184,20 +185,6 @@
                 <label for="email">Your Email Address</label>
                 <br>
                 <input type="text" id="email" name="Email" placeholder="Your email..." required>
-                <!-- <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="algeria">Algeria</option>
-                    <option value="china">China</option>
-                    <option value="denmark">Denmark</option>
-                    <option value="england">England</option>
-                    <option value="egypt">Egypt</option>
-                    <option value="france">France</option>
-                    <option value="ireland">Ireland</option>
-                    <option value="netherlands">Netherlands</option>
-                    <option value="scotland">Scotland</option>
-                    <option value="spain">Spain</option>
-                    <option value="usa">United States of America</option>
-                </select> -->
                 <br>
                 <br>
                 <label for="message">Write your message here!</label>
@@ -212,12 +199,12 @@
     </flex-container-blue>
 
     <svg viewBox="0 0 100 10" preserveAspectRatio="none">
-        <polygon points="100 0 100 10 0 10" stroke="0"></polygon>
+        <polygon points="100 0 100 10 0 10" stroke="none"></polygon>
     </svg>
-
+    
     <flex-container-black>
         <footer style=color:white>
-            <h4> Created by Ben - Version 1.6.0 </h4>
+            <h4> Created by Ben - Version 1.6.1 </h4>
         </footer>
     </flex-container-black>
 
@@ -231,6 +218,11 @@
     
     showSlides(1,1);
     showSlides(1,2);
+
+    if (n > slides.length || n < 1) {
+            n = 1;
+            alert(n);
+        }
 
     function plusSlides(n, slideshowIndex) {
         if (slideshowIndex === 1) {
@@ -259,16 +251,14 @@
         //     slideIndex = slideshowIndex2;
         // }
 
-        if (n > slides.length) {
-            n = 1}
-
-        if (n < 1) {
-            n = slides.length;
-        }
-
-        for (i = 0; i < slides.length; i++) {
+        
+        for (i = 0; i < slides.length ; i++) {
             slides[i].style.display = "none";
         }
+
+        var slideIndex = (n - 1 + slides.length) % slides.length;
+        slides[slideIndex].style.display = "block"
+
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
