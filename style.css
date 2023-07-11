@@ -35,16 +35,17 @@ body {
 
 /* Navbar settings */
 .navbar {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     overflow:hidden;
     background-color:rgb(36, 36, 36);
     position: fixed;
     width: 101%;
     top:0;
     margin-left: 0px; 
-    opacity:0.8;
+    opacity:0.6;
     padding:0px;
-    /* backdrop-filter: blur(100px); */ 
-    box-shadow: 0 5px 10px rgba(0,0,0,0.60);
+    box-shadow: 0 7px 15px rgba(0,0,0,0.60);
     z-index:100;
 }
 
@@ -59,6 +60,7 @@ body {
 
 .navbar a:hover {
     background-color: #4f4f4f;
+    border-radius:10px;
 }
 
 /* Hero image settings */
