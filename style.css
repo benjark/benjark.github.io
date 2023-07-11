@@ -249,9 +249,10 @@ flex-container-gray {
 paper {
     display:block;
     background-color:white;
-    padding-left: 30px;
+    padding-left: 50px;
     box-shadow: 0 0px 32px rgba(0,0,0,0.7);
-    padding-right:30px;
+    padding-right:50px;
+    padding-bottom:50px;
 }
 
 flex-container-blue {
@@ -274,6 +275,18 @@ ul {
     position:sticky;
     height:70px;
     width: 100%;
+}
+
+paper ul {
+    list-style-type:circle;
+}
+
+paper p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+paper li {
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 div {
