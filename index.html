@@ -2,6 +2,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <!-- Website scripts. Primarily for the functions of the slideshow -->
+        <script src="scripts.js"></script>
     </head>
 
     <body>
@@ -14,32 +16,25 @@
                 <li><a href = "#Resume">Resume</a></li>
                 <li><a href = "#Contact">Contact Me</a></li>
             </ul>
-
-         </nav>
+        </nav>
 
         <!-- Hero Image and Text -->
         <section class="hero">
 
             <div class = "hero-content">
-                <p class ="hero-title">
-                    <b>Benjamin Kloepfer</b>
-                </p>
+                <p class ="hero-title"><b>Benjamin Kloepfer</b></p>
             </div>
         </section>
-
 
     <!-- Start of black section with projects -->
     <flex-container-black id="Projects">
 
         <!-- ResilientMissionary Project -->
-        
         <flex-container>
-            
             <div>
                 <h1 style="font-size:55px; color:white">Projects</h1>
                 <h2 style="font-size:30px; color:white">ResilientMissionary: A Missionary Mental Health Application</h2>
                 <a style="font-size:20px; color:white" href="https://github.com/Call-To-Health/MissionaryMentalHealth" target="blank">Github Link</a>
-            
             <div class="slideshow-container">
                 <div class="mySlides1 fade">
                     <div class="numbertext">1 / 5</div>
@@ -79,14 +74,13 @@
             </div> 
         </flex-container>
     </flex-container-black>
+
 <!-- Journal Project -->
 <flex-container-black>
-        <flex-container>
-            
+        <flex-container> 
             <div>
                 <h2 style="font-size:30px; color:white">JournalApp: A Simple Journaling Application</h2>
                 <a style="font-size:20px; color:white" href="https://github.com/benjark/JournalApp" target="blank">Github Link</a>
-            
             <div class="slideshow-container">
                 <div class="mySlides2 fade">
                     <div class="numbertext">1 / 5</div>
@@ -132,38 +126,40 @@
                 <polygon points="100 0 100 10 0 10" fill="lightgray"  stroke="lightgray" stroke-width="0.1"></polygon>
             </svg> -->
 
-        <h1 id="Resume" style="font-size:55px; color:black"></h1>
-            <br><br><br><br><br><br><br>
+    <!-- Resume Section -->
+
+        <div id="Resume"></div>
+        <div class="spacer"></div>
+
     <flex-container-gray>
-    <paper>
-        <h3 style="font-size:35px;text-align:center; color:black"> Benjamin Kloepfer</h3>
-        <hr>
-        <h4 style="stroke:none; color:black">My Skills</h4>
-        <p><strong>Programming: </strong>HTML/CSS, Python, React Native, JavaScript</p>
-        <p><strong>Other Skills: </strong>Amazon Web Services (AWS), Project Management, User Experience Design</p>
-        <h4 style="stroke:none; color:black">Experience</h4>
-        <p><strong>Computing Specialist </strong>August 2020-Present</p>
-        <p>BYU Department of Continuing Education</p>
-        <h4 style="stroke:none; color:black">Languages</h4>
-        <p><strong>Spanish </strong>- Professional Competency</p>
-        <p><strong>English </strong>- Native</p>
-        <h4 style="stroke:none; color:black">Education</h4>
-        <p><strong>Master of Information Systems Management </strong>- December 2023, Brigham Young University Marriott School of Business</p>
-        <p></p>
-        <p><strong>GPA </strong>- 3.76 | <strong>Graduate GPA</strong> - 3.85</p>
-        <h4 style="stroke:none; color:black">Achievements</h4>
-        <p>Exemplary Academic Achievement Scholar - Utah Board of Education</p>
-        <p>General Sterling Scholar - Mountain View High School</p>
-        <p>Eagle Scout</p>
 
-    </paper>
+        <paper>
+            <h3 style="font-size:35px;text-align:center; color:black"> Benjamin Kloepfer</h3>
+            <hr>
+            <h4 style="stroke:none; color:black">My Skills</h4>
+            <p><strong>Programming: </strong>HTML/CSS, Python, React Native, JavaScript</p>
+            <p><strong>Other Skills: </strong>Amazon Web Services (AWS), Project Management, User Experience Design</p>
+            <h4 style="stroke:none; color:black">Experience</h4>
+            <p><strong>Computing Specialist </strong>August 2020-Present</p>
+            <p>BYU Department of Continuing Education</p>
+            <h4 style="stroke:none; color:black">Languages</h4>
+            <p><strong>Spanish </strong>- Professional Competency</p>
+            <p><strong>English </strong>- Native</p>
+            <h4 style="stroke:none; color:black">Education</h4>
+            <p><strong>Master of Information Systems Management </strong>- December 2023, Brigham Young University Marriott School of Business</p>
+            <p></p>
+            <p><strong>GPA </strong>- 3.76 | <strong>Graduate GPA</strong> - 3.85</p>
+            <h4 style="stroke:none; color:black">Achievements</h4>
+            <p>Exemplary Academic Achievement Scholar - Utah Board of Education</p>
+            <p>General Sterling Scholar - Mountain View High School</p>
+            <p>Eagle Scout</p>
+        </paper>
     
-</flex-container-gray>
+    </flex-container-gray>
 
-    <svg class="svg-gray" viewBox="0 0 50 10" preserveAspectRatio="none">
-        <polygon points="100 0 100 10 0 10" fill="rgb(18, 55, 85)" stroke="rgb(18, 55, 85)" stroke-width="0.05"></polygon>
-    </svg>
-
+        <svg class="svg-gray" viewBox="0 0 50 10" preserveAspectRatio="none">
+            <polygon points="100 0 100 10 0 10" fill="rgb(18, 55, 85)" stroke="rgb(18, 55, 85)" stroke-width="0.05"></polygon>
+        </svg>
 
     <flex-container-blue id="Contact">
         <flex-container>
@@ -201,60 +197,11 @@
         <svg viewBox="0 0 100 10" preserveAspectRatio="none">
             <polygon points="100 0 100 10 0 10" stroke="black" stroke-width="0.1"></polygon>
         </svg>
+
         <footer style=color:white>
             <h4 style="font-size:15px"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/Call-To-Health/MissionaryMentalHealth" target="blank"> Version 1.7.2</a> </h4>
         </footer>
     </flex-container-black>
 
 </body>
-
-<!-- Website scripts. Primarily for the functions of the  -->
-<script>
-
-    var slideshowIndex1 = 1;
-    var slideshowIndex2 = 1;
-    
-    showSlides(1,1);
-    showSlides(1,2);
-
-    if (n > slides.length || n < 1) {
-            n = 1;
-        }
-
-    function plusSlides(n, slideshowIndex) {
-        if (slideshowIndex === 1) {
-            showSlides(slideshowIndex1 = (slideshowIndex1 + n), 1);
-        } else if (slideshowIndex === 2) {
-            showSlides(slideshowIndex2 = (slideshowIndex2 + n), 2);
-        }
-    }
-
-    function currentSlide(n, slideshowIndex) {
-        if (slideshowIndex === 1) {
-        showSlides(slideshowIndex1 = n, 1);
-        } else if (slideshowIndex === 2) {
-            showSlides(slideshowIndex2 = n, 2);
-        }
-    }
-
-    function showSlides(n, slideshowIndex) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides" + slideshowIndex);
-        let dots = document.getElementsByClassName("dot" + slideshowIndex);
-
-        for (i = 0; i < slides.length ; i++) {
-            slides[i].style.display = "none";
-        }
-
-        var slideIndex = (n - 1 + slides.length) % slides.length;
-        slides[slideIndex].style.display = "block";
-
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[n-1].style.display = "block";
-        dots[n-1].className += " active";
-    }
-    
-</script>
 </html>
