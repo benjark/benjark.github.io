@@ -168,7 +168,7 @@
     <flex-container-blue id="Contact">
         <flex-container>
         
-            <h1 style="font-size:55px; text-align:center; color:white">Contact Ben</h1>
+            <h1 style="font-size:55px; text-align:center; color:white">Contact Me</h1>
                 <!-- <p style="font-size:20px; color:white">Shoot me a message, and I'll get back to you as soon as I can!</p> -->
 
             <form-container>
@@ -202,7 +202,7 @@
             <polygon points="100 0 100 10 0 10" stroke="black" stroke-width="0.1"></polygon>
         </svg>
         <footer style=color:white>
-            <h4 style="font-size:15px"> Created by Ben - Version 1.7.1 </h4>
+            <h4 style="font-size:15px"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/Call-To-Health/MissionaryMentalHealth" target="blank"> Version 1.7.2</a> </h4>
         </footer>
     </flex-container-black>
 
@@ -219,7 +219,6 @@
 
     if (n > slides.length || n < 1) {
             n = 1;
-            alert(n);
         }
 
     function plusSlides(n, slideshowIndex) {
@@ -243,19 +242,12 @@
         let slides = document.getElementsByClassName("mySlides" + slideshowIndex);
         let dots = document.getElementsByClassName("dot" + slideshowIndex);
 
-        // if (slideshowIndex === 1) {
-        //     slideIndex = slideshowIndex1;
-        // } else if (slideshowIndex === 2) {
-        //     slideIndex = slideshowIndex2;
-        // }
-
-        
         for (i = 0; i < slides.length ; i++) {
             slides[i].style.display = "none";
         }
 
         var slideIndex = (n - 1 + slides.length) % slides.length;
-        slides[slideIndex].style.display = "block"
+        slides[slideIndex].style.display = "block";
 
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
