@@ -35,17 +35,14 @@ body {
 
 /* Navbar settings */
 .navbar {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    overflow:hidden;
+    /* -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); */
+    overflow:auto;
     background-color:rgb(36, 36, 36);
     position: fixed;
     width: 100%;
-    top:0;
-    margin-left: 0px; 
     opacity:0.6;
-    padding:0px;
-    box-shadow: 0 7px 15px rgba(0,0,0,0.60);
+    box-shadow: 0 7px 15px rgba(0,0,0,0.75);
     z-index:100;
 }
 
@@ -53,7 +50,7 @@ body {
     float: left;
     color:white;
     text-align:center;
-    padding: 30px 30px;
+    padding:25px;
     text-decoration: none;
     font-family:'Helvetica Neue';
 }
@@ -61,6 +58,7 @@ body {
 .navbar a:hover {
     background-color: #4f4f4f;
     border-radius:10px;
+
 }
 
 /* Hero image settings */
@@ -322,7 +320,7 @@ input[type=text],select,textarea {
 }
 
 input[type=submit] {
-    background-color: #ff3838ae;
+    background-color: #ff3838d5;
     color:white;
     padding: 20px 50px;
     border: none;
