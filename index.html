@@ -29,7 +29,7 @@
 
         <!-- ResilientMissionary Project -->
         <flex-container>
-            <div>
+            <div class="hidden">
                 <h1 style="font-size:55px; color:white">Projects</h1>
                 <h2 style="font-size:30px; color:white">ResilientMissionary: A Missionary Mental Health Application</h2>
                 <a style="font-size:20px; color:white" href="https://github.com/Call-To-Health/MissionaryMentalHealth" target="blank">Github Link</a>
@@ -76,7 +76,7 @@
 <!-- Journal Project -->
 <flex-container-black>
         <flex-container> 
-            <div>
+            <div class="hidden">
                 <h2 style="font-size:30px; color:white">JournalApp: A Simple Journaling Application</h2>
                 <a style="font-size:20px; color:white" href="https://github.com/benjark/JournalApp" target="blank">Github Link</a>
             <div class="slideshow-container">
@@ -126,8 +126,6 @@
 
     <!-- Resume Section -->
 
-        
-
     <flex-container-gray id="Resume">
 
         <div></div>
@@ -136,7 +134,7 @@
     </flex-container-gray>
     <flex-container-gray>
 
-        <paper>
+        <paper class="hidden">
             <h3 style="font-size:35px;text-align:center; color:black"> Benjamin Kloepfer</h3>
             <h4 style="font-size:15px;text-align:center; color:black"><a href="https://www.linkedin.com/in/benkloepfer/" target="blank"> LinkedIn Profile</a></h4>
             <hr>
@@ -192,7 +190,7 @@
         </svg>
 
     <flex-container-blue id="Contact">
-        <flex-container>
+        <flex-container  class="hidden">
         
             <h1 style="font-size:55px; text-align:center; color:white">Contact Me</h1>
                 <!-- <p style="font-size:20px; color:white">Shoot me a message, and I'll get back to you as soon as I can!</p> -->
@@ -232,6 +230,22 @@
 
 </body>
 <script>
+
+// Scripts for "slide in" animations. 
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    }); 
+})
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
 // Scripts for slideshow functionality.
 var slideshowIndex1 = 1;
