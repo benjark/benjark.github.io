@@ -458,6 +458,7 @@ input [type=submit]:hover {
     text-align:center;
     text-decoration: none;
     border-radius:50%;
+    margin-left: 10px;
 }
 
 .fa:hover {
@@ -465,23 +466,27 @@ input [type=submit]:hover {
 }
 
 .fa-facebook {
-    background: #3f5b82;
+    background: rgb(12 137 239);
     color:white;
 }
 
 .fa-linkedin {
-    background: #1201cc;
+    background: rgb(10 102 194);
     color:white;
 }
 .fa-youtube {
-    background: #d03c3c;
+    background: rgb(236 34 0);
+    color:white;
+}
+.fa-github {
+    background: rgb(114 64 201);
     color:white;
 }
 
 .social-container {
     justify-content:center;
     padding:10px;
-    padding-left:50px;
+    padding-left:0px;
     padding-bottom:30px;
     flex:1;
 }
