@@ -89,7 +89,8 @@ body {
     background-attachment: fixed;
     background-size:cover;
     background-position: center center;
-    /* filter: brightness(85%); */
+    /* This causes major lag on Safari if it's anything but 100% or 0% ever since setting the background-attachment to fixed. (for the parallax effect */
+    filter: brightness(100%);
 }
 
 .arrow_container {
@@ -193,6 +194,7 @@ body {
     text-align:center;
     font-size:120px;
     font-family: CursiveLogo;
+    text-shadow: 0 8px 8px rgba(0,0,0,0.6);
 }
 
 /* Slideshow settings */
