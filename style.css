@@ -68,11 +68,9 @@ body {
 
 /* Hero image settings */
 .hero {
-    position: relative;
     width: auto;
     height:100vh;
     display:flex;
-    margin-left: -8px;
     justify-content: center;
     align-items: center;
     flex-grow:1;
@@ -88,9 +86,10 @@ body {
     height:100%;
     background: url(https://lh3.googleusercontent.com/pw/AJFCJaVKJOz2wXiuzn5RWFlee0zUu2LMfZMvMiJOGTFJ9kVHreBbpdT6MOx0k-ShvWvqIuWV0yXNfZcvV-ndSWnO6PAeboksxoELFRZ25_ML8RzxViuynXCi1HnTojjwGgS9leM-BZsJ9QR9dC4UzZXsg4crsw=w1498-h1996-s-no?authuser=0);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size:cover;
     background-position: center center;
-    filter: brightness(85%);
+    /* filter: brightness(85%); */
 }
 
 .arrow_container {
@@ -140,6 +139,10 @@ body {
     animation: move 3s ease-out 2s infinite;
 }
 
+.scroll-trigger {
+    display:none;
+}
+
 .herotext {
     display:block;
     margin-top: 75px;
@@ -152,7 +155,7 @@ body {
     white-space: nowrap;
     opacity: .65;
     animation: pulse 2s linear alternate infinite;
-
+    cursor:pointer;
 }
 
 @keyframes pulse {
@@ -489,4 +492,8 @@ input [type=submit]:hover {
     padding-left:0px;
     padding-bottom:30px;
     flex:1;
+}
+
+#scroll-radio:checked ~ #Projects {
+    scroll-margin-top:200px;
 }
