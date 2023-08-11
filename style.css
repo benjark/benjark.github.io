@@ -31,11 +31,7 @@ p {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media (max-width: 620px) {
-    .paper, .navbar, .hero {
-        width:70%;
-    }
-}
+
 
 /* Settings for the entire page body */
 body {
@@ -47,30 +43,38 @@ body {
 /* Navbar settings */
 .navbar {
     -webkit-backdrop-filter:blur(10px) saturate(170%);
-    backdrop-filter: blur(5px) saturate(170%);
-    overflow:auto;
+    backdrop-filter: blur(10px) saturate(180%);
     background-color:rgba(36, 36, 36,0.6);
     position: fixed;
     width: 100%;
+    height:60px;
     box-shadow: 0 7px 15px rgba(0,0,0,0.75);
     z-index:100;
+    /* transition: height 2.3s ease-in-out; */
 }
+
+/* .navbar.scroll {
+    height:1000px;
+} */
 
 /* Text settings for navbar */
 .navbar a {
     float: left;
     color:white;
     text-align:center;
-    padding:25px;
+    padding:20px;
+    padding-block:8px;
     text-decoration: none;
-    font-family:'Helvetica Neue';
+    font-size:14px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /* On hover interaction on navbar */
 .navbar a:hover {
-    background-color: #4f4f4f;
+    background-color: #4a4a4a;
     border-radius:10px;
 }
+
 
 /* Hero image settings */
 .hero {
@@ -154,7 +158,7 @@ body {
     display:block;
     margin-top: 75px;
     margin-left:-42px;
-    font-family: "Helvetica Neue", "Helvetica", Arial;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
     color: #fff;
     text-transform: uppercase;
@@ -189,8 +193,6 @@ body {
     }
 }
 
-
-
 .hero-content {
     position: relative;
 }
@@ -206,7 +208,7 @@ body {
 /* Slideshow settings */
 .slideshow-container {
     max-width:400px;
-    position:relative;
+    position:static;
     background-color:black;
     margin:5% auto;
     display:block;
@@ -243,15 +245,20 @@ body {
     background-color: rgba(0,0,0,0.6)
 }
 
+.slideimg {
+    max-height:800px;
+}
+
 .text {
     color: white;
     font-size:19px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 8px 12px;
     position: absolute;
+    padding-left:95px;
     bottom: 8px;
     width: auto;
-    text-align: center;
+    text-align:justify;
 }
 
 /* Settings for the 1/5,2/5, etc.  */
@@ -260,7 +267,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size:20px;
     padding: 8px 12px;
-    position: absolute;
+    position: relatiev;
     top: 0;
 }
 
@@ -340,6 +347,8 @@ flex-container-black {
     justify-content: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 20px 0 ;
+    padding-left:100px;
+    padding-right:10px;
 }
 flex-container-gray {
     display:flex;
@@ -348,6 +357,8 @@ flex-container-gray {
     justify-content: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 20px 0 ;
+    padding-left:10px;
+    padding-right:10px;
     padding-bottom:40px;
 }
 paper {
@@ -408,6 +419,7 @@ form-container {
     padding-left: 20px;
     padding-right: 20px;
 }
+
 
 
 /* Contact Me section settings */
@@ -497,11 +509,44 @@ input [type=submit]:hover {
 .social-container {
     justify-content:center;
     padding:10px;
-    padding-left:0px;
+    padding-left:28px;
     padding-bottom:30px;
     flex:1;
 }
 
 #scroll-radio:checked ~ #Projects {
     scroll-margin-top:200px;
+}
+
+/* CSS for website if it's being used on the phone */
+
+@media only screen and (max-width: 800px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    /* Slideshow settings */
+.slideshow-container {
+    max-width:400px;
+    position:static;
+    background-color:black;
+    margin:5% auto;
+    display:block;
+}
+
+.navbar a {
+    float: left;
+    color:white;
+    text-align:center;
+    padding:3px;
+    padding-block:8px;
+    text-decoration: none;
+    font-size:12px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.slideimg {
+    max-height:400px;
+}
+
 }
