@@ -32,8 +32,8 @@ p {
 }
 
 @media only screen and (max-width: 620px) {
-    .paper, .navbar, .right {
-        width:50%
+    .paper, .navbar, .hero {
+        width:10%;
     }
 }
 
@@ -74,7 +74,7 @@ body {
 
 /* Hero image settings */
 .hero {
-    width: auto;
+    width: 100%;
     height:100vh;
     display:flex;
     justify-content: center;
