@@ -207,7 +207,6 @@ body {
 
 /* Slideshow settings */
 .slideshow-container {
-    max-width:400px;
     position:static;
     background-color:black;
     margin:5% auto;
@@ -223,12 +222,14 @@ body {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    /* This centers it pretty closely to the middle of the photo. */
+    top: 58%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: rgba(176, 176, 176, 0.6);
+    color: rgba(229, 229, 229, 0.8);
     font-weight:bold;
+    background-color: rgba(0, 0, 0, 0.6);
     font-size: 40px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
@@ -238,6 +239,7 @@ body {
 
 .next {
     right: 0;
+    padding-right:432px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -255,6 +257,7 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 8px 12px;
     position: absolute;
+    /* This is what makes the text centered below the images - very specific value!  */
     padding-left:95px;
     bottom: 8px;
     width: auto;
@@ -347,7 +350,7 @@ flex-container-black {
     justify-content: center;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 20px 0 ;
-    padding-left:100px;
+    /* padding-left:100px; */
     padding-right:10px;
 }
 flex-container-gray {
@@ -527,8 +530,7 @@ input [type=submit]:hover {
 
     /* Slideshow settings */
 .slideshow-container {
-    max-width:400px;
-    position:static;
+    max-width:240px;
     background-color:black;
     margin:5% auto;
     display:block;
@@ -545,8 +547,28 @@ input [type=submit]:hover {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.text {
+    color: white;
+    font-size:19px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 8px 12px;
+    position: absolute;
+    /* This here is what makes the text centered on mobile.  */
+    padding-left:35px;
+    bottom: 8px;
+    width: auto;
+    text-align:justify;
+}
+
+/* This makes the next arrow in line for the mobile version */
+.next {
+    right: 0;
+    padding-right: 60px;
+    border-radius: 3px 0 0 3px;
+}
+
 .slideimg {
-    max-height:400px;
+    max-height:500px;
 }
 
 }
