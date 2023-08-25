@@ -564,6 +564,10 @@ input [type=submit]:hover {
     display:block;
 }
 
+.arrow_container {
+    height:120px;
+}
+
 .navbar a {
     float: left;
     color:white;
@@ -592,7 +596,7 @@ input [type=submit]:hover {
 }
 
 .hero::before {
-    background-attachment:scroll;
+    background-attachment:fixed;
     background-size:cover;
 }
 
