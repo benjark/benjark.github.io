@@ -567,7 +567,7 @@ input [type=submit]:hover {
 }
 
 .arrow_container {
-    height:120px;
+    height:180px;
 }
 
 .navbar a {
@@ -597,7 +597,7 @@ input [type=submit]:hover {
     z-index: -1;
 }
 
-/* For some reason these don't make a difference */
+/* background-attachment:fixed is NOT supported in iOS. */
 .hero::before {
     content: "";
     display: block;
