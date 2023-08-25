@@ -598,7 +598,7 @@ input [type=submit]:hover {
 }
 
 /* background-attachment:fixed is NOT supported in iOS. */
-.hero::before {
+/* .hero::before {
     content: "";
     display: block;
     position:fixed;
@@ -607,7 +607,7 @@ input [type=submit]:hover {
     z-index:-10;
     -webkit-background-size: cover;
     background-size:cover;
-}
+} */
 
 form-container{
     padding-left:0px;
