@@ -547,7 +547,9 @@ input [type=submit]:hover {
     scroll-margin-top:200px;
 }
 
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 /* CSS for website if it's being used on the phone */
+/* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 
 @media only screen and (max-width: 800px) {
     .navbar ul {
@@ -595,8 +597,15 @@ input [type=submit]:hover {
     z-index: -1;
 }
 
+/* For some reason these don't make a difference */
 .hero::before {
-    background-attachment:fixed;
+    content: "";
+    display: block;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:-10;
+    -webkit-background-size: cover;
     background-size:cover;
 }
 
