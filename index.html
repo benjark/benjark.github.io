@@ -15,11 +15,13 @@
         <!-- Navbar -->
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a style="font-family: CursiveLogo;padding-top:0px; text-shadow: 0 8px 8px rgba(0,0,0,0.4);padding-right:8px; font-size:28px" href="#hero">Benjamin Kloepfer</a></li>
+                <li><a class='special-link' style="font-family: CursiveLogo;padding-top:0px; text-shadow: 0 8px 8px rgba(0,0,0,0.4);padding-right:8px; font-size:28px" href="#hero">Benjamin Kloepfer</a></li>
                 <li><a href = "#Projects">Projects</a></li>
                 <li><a href = "#Resume">Resume</a></li>
                 <li><a href = "#Contact">Contact Me</a></li>
+                <box-icon name="menu" color="whitesmoke" size="md" id="menu"></box-icon>
             </ul>
+            
         </nav>
 
         <!-- Hero Image and Text -->
@@ -273,7 +275,7 @@
         
 
         <footer style=color:white>
-            <h4 style="font-size:15px; text-align:center"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/benjark/benjark.github.io" target="blank"> Version 2.0.5 </a> </h4>
+            <h4 style="font-size:15px; text-align:center"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/benjark/benjark.github.io" target="blank"> Version 2.1.0 </a> </h4>
             <hr align="center" width="30%"">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <div class="social-container">
@@ -287,6 +289,9 @@
     </flex-container-black>
 
 </body>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
 <script>
 
 // Scripts for "slide in" animations. 
@@ -302,10 +307,26 @@ const observer = new IntersectionObserver((entries) => {
     }); 
 })
 
+// Script for showing the menu on the mobile version of the website. 
+
+document.querySelector('#menu').addEventListener('click', () => {
+    const navbarLinks = document.querySelectorAll('.navbar a:not(.special-link)');
+    navbarLinks.forEach(link => {
+        if (link.style.display == 'block') {
+            link.style.display = 'none';
+        } else {
+            link.style.display = 'block';
+        }
+    })
+})
+
+
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
 // Scripts for slideshow functionality.
+n=1;
+
 var slideshowIndex1 = 1;
 var slideshowIndex2 = 1;
     

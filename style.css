@@ -57,6 +57,14 @@ body {
     z-index:100;
 }
 
+.navbar ul li a:hover{
+    color:#e1e1e1;
+    transition:0.3s ease-in-out;
+}
+
+nav box-icon {
+    display:none;}
+
 /* Text settings for navbar */
 .navbar a {
     float: left;
@@ -69,12 +77,11 @@ body {
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* On hover interaction on navbar */
-.navbar a:hover {
+/* On hover interaction on navbar - this doesn't work for now. */
+nav ul li a:hover {
     background-color: #4a4a4a;
     border-radius:10px;
 }
-
 
 /* Hero image settings */
 .hero {
@@ -552,9 +559,7 @@ input [type=submit]:hover {
 /* -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- */
 
 @media only screen and (max-width: 800px) {
-    .navbar ul {
-        flex-direction: column;
-    }
+
 
     /* Slideshow settings */
 .slideshow-container {
@@ -566,11 +571,57 @@ input [type=submit]:hover {
     display:block;
 }
 
+.navbar {
+    flex-direction: column;
+}
+
+
+.navbar a {
+    /* This is what hides the links on the mobile version of the website.  */
+    display: none;
+    background:black;
+    transition: max-height 2.5s ease-in-out;
+}
+
+
+
+.navbar ul li:first-child a {
+    display:block;
+    background: transparent;
+}
+
+/* .navbar ul{
+    background:whitesmoke;
+    display:none;
+
+} */
+
+
+.showmenu{
+    display:block;
+}
+
+.navbar ul.showmenu {
+    display:block;
+}
+
+.navbar box-icon {
+    display:block;
+    position:absolute;
+    top:-8px;
+    right:32px;
+}
+
+.navbar ul li {
+    display:block;
+    padding:0% 0;
+}
+
 .arrow_container {
     height:180px;
 }
 
-.navbar a {
+/* .navbar a {
     float: left;
     color:white;
     text-align:center;
@@ -579,7 +630,7 @@ input [type=submit]:hover {
     text-decoration: none;
     font-size:12px;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+} */
 
 /* This makes the next arrow in line for the mobile version */
 .next {
@@ -590,6 +641,11 @@ input [type=submit]:hover {
 
 flex-container-black {
     padding-top:20px;
+}
+
+flex-container {
+    padding-left:0px;
+    padding-right:0px;
 }
 
 .hero {
