@@ -15,10 +15,11 @@
         <!-- Navbar -->
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class='special-link' style="font-family: CursiveLogo;padding-top:0px; text-shadow: 0 8px 8px rgba(0,0,0,0.4);padding-right:8px; font-size:28px" href="#hero">Benjamin Kloepfer</a></li>
+                <li><b class='special-link' style="font-family: CursiveLogo;padding-top:0px; text-shadow: 0 8px 8px rgba(0,0,0,0.4);padding-right:8px; font-size:28px" onclick="window.location.href='#hero'">Benjamin Kloepfer</b></li>
                 <li><a href = "#Projects">Projects</a></li>
                 <li><a href = "#Resume">Resume</a></li>
                 <li><a href = "#Contact">Contact Me</a></li>
+
                 <box-icon name="menu" color="whitesmoke" size="md" id="menu"></box-icon>
             </ul>
             
@@ -275,7 +276,7 @@
         
 
         <footer style=color:white>
-            <h4 style="font-size:15px; text-align:center"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/benjark/benjark.github.io" target="blank"> Version 2.1.0 </a> </h4>
+            <h4 style="font-size:15px; text-align:center"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/benjark/benjark.github.io" target="blank"> Version 2.1.1 </a> </h4>
             <hr align="center" width="30%"">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <div class="social-container">
@@ -317,8 +318,8 @@ document.querySelector('#menu').addEventListener('click', () => {
         } else {
             link.style.display = 'block';
         }
-    })
-})
+    });
+});
 
 
 const hiddenElements = document.querySelectorAll('.hidden');
