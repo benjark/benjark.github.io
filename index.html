@@ -11,19 +11,19 @@
     </head>
 
     <body>
-    
         <!-- Navbar -->
-        <nav id="navbar" class="navbar">
-            <ul>
-                <li><b class='special-link' style="font-family: CursiveLogo;padding-top:0px; text-shadow: 0 8px 8px rgba(0,0,0,0.4);padding-right:8px; font-size:28px" onclick="window.location.href='#hero'">Benjamin Kloepfer</b></li>
-                <li><a href = "#Projects">Projects</a></li>
-                <li><a href = "#Resume">Resume</a></li>
-                <li><a href = "#Contact">Contact Me</a></li>
 
-                <box-icon name="menu" color="whitesmoke" size="md" id="menu"></box-icon>
-            </ul>
-            
-        </nav>
+            <nav id="top">
+                <ul>
+                    <li><b class="logo" onclick="window.location.href='#top'">Benjamin Kloepfer</b></li>
+                    <li><a href = "#Projects">Projects</a></li>
+                    <li><a href = "#Resume">Resume</a></li>
+                    <li><a href = "#Contact">Contact Me</a></li>
+                    <box-icon name="menu" color="whitesmoke" size="md" id="menu"></box-icon>
+                </ul>
+            </nav>
+
+        <div class="overlay"></div>
 
         <!-- Hero Image and Text -->
         <section id="hero" class="hero">
@@ -276,12 +276,12 @@
         
 
         <footer style=color:white>
-            <h4 style="font-size:15px; text-align:center"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/benjark/benjark.github.io" target="blank"> Version 2.1.1.1 </a> </h4>
-            <hr align="center" width="30%"">
+            <h4 style="font-size:15px; text-align:center"> Created by Ben - <a style="font-size:15px; color:white" href="https://github.com/benjark/benjark.github.io" target="blank"> Version 2.1.2 </a> </h4>
+            <hr align-items="center" width="30%">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
             <div class="social-container">
                 <a href ="https://www.linkedin.com/in/benkloepfer/" target="_blank" class="fa fa-linkedin"></a>
-                <a href ="https://www.facebook.com/brkloepfer/" target="_blank" class="fa fa-github"></a>
+                <a href ="https://github.com/benjark" target="_blank" class="fa fa-github"></a>
                 <a href ="https://www.facebook.com/brkloepfer/" target="_blank" class="fa fa-facebook"></a>
                 <a href ="https://www.youtube.com/zircoben" target="_blank" class="fa fa-youtube"></a>
                 
@@ -311,7 +311,7 @@ const observer = new IntersectionObserver((entries) => {
 // Script for showing the menu on the mobile version of the website. 
 
 document.querySelector('#menu').addEventListener('click', () => {
-    const navbarLinks = document.querySelectorAll('.navbar a:not(.special-link)');
+    const navbarLinks = document.querySelectorAll('nav a:not(logo)');
     navbarLinks.forEach(link => {
         if (link.style.display == 'block') {
             link.style.display = 'none';
@@ -320,7 +320,6 @@ document.querySelector('#menu').addEventListener('click', () => {
         }
     });
 });
-
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
